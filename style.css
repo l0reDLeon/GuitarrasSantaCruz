@@ -1,116 +1,240 @@
-body{
-    background-color: #fbfaf8;
-    font-family: arial; 
-}
-header{
+/*https://coolors.co/1e212b-7d8ca3-ffc800-fffffc-f9f8f8*/
+
+body {
+    background-color: #fffffc;
+    font-family: arial;
+    font-size: 18 px;
+    margin-bottom: 0px;
+  }
+  header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
     height: 50px;
-
-    background-color: #333;
+  
+    background-color: #ffc800;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-}
-
-header h1 {
-    font-size: 1.2rem;
+  }
+  
+  header h1 {
+    position: relative;
+    font-size: 1.2rem; /*AAAAAAAAAAAAAAAAAAA SE HACE CHIKITOOOOAAAAAAA*/
     margin: 0;
-    margin-left: -50vw;
-}
-
-.logo img{
+    margin-right: auto;
+  }
+  
+  .logo img {
     height: 4vh;
-}
-
-header nav ul {
+  }
+  
+  header nav ul {
     list-style: none;
     display: flex;
     margin: 0;
     padding-right: 4vh;
-}
-
-header nav ul li a {
+  }
+  
+  header nav ul li a {
     color: white;
     text-decoration: none;
     padding: 10px;
-}
-
-header nav ul li a img{
+  }
+  
+  header nav ul li a img {
     width: 2.5vh;
     background-color: #fbfaf8;
     border-radius: 25%;
-}
+  }
+  
+  /* Base styles */
 
-section{
+.hero {
+    background-image: url("Resources/TallHERO.jpg");
+    background-size: cover;
+    background-position: center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0px;
+    padding:0px;
+  }
+  
+  .hero-text {
+    background-color: rgba(255, 200, 0, 0.9);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+  }
+  
+  .hero-text h1 {
+    margin: 0;
+  }
+  
+  .hero-text p {
+    margin: 0;
+  }
+  
+  /* Styles for mobile devices */
+  @media (max-width: 999px) {
+    
+    .hero {
+        display:none;
+        height: 300px;
+    }
+    
+    .hero-text h1 {
+      font-size: 1.5rem;
+    }
+    
+    .hero-text p {
+      font-size: 1rem;
+    }
+
+    header h1 {
+
+        font-size: 18px; /*AAAAAAAAAAAAAAAAAAA SE HACE CHIKITOOOOAAAAAAA*/
+
+      }
+    
+  }
+  
+  /* Styles for desktop devices */
+  @media (min-width: 1000px) {
+    
+    .hero {
+      height: 800px;
+}
+    
+    .hero-text h1 {
+      font-size: 2.5rem;
+    }
+    
+    .hero-text p {
+      font-size: 1.2rem;
+    }
+    
+  }
+
+  .section-divider {
+    /* This will create a full-width divider */
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+  
+    /* Use flexbox to center the text horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .section-divider h2 {
+    /* Set the desired font size and style */
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  
+    /* Use a pseudo-element to add some space around the text */
+    position: relative;
+  }
+  
+  .section-divider h2::before,
+  .section-divider h2::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 1px;
+    background-color: #ccc;
+    position: absolute;
+    top: 50%;
+  }
+  
+  .section-divider h2::before {
+    left: -30px;
+  }
+  
+  .section-divider h2::after {
+    right: -30px;
+  }
+  
+  section {
+    background-color: #f9f8f8;
     margin-left: 6vw;
     margin-right: 6vw;
-}
-
-.collection {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+  
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    padding-left: 4vh;
+    padding-right: 4vh;
+  }
+  
+  .collection {
     display: grid;
     grid-template-columns: repeat(auto-fit, 250px);
     grid-auto-rows: 300px;
     grid-gap: 1rem;
     justify-content: center;
-}
-.collection article {
+  }
+  .collection article {
     font-size: 2vw;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid silver;
     background: #f5f5f5;
-    box-shadow: 0 2px 10px -5px rgba(0,0,0,0.5);
-}
-.collection article.wide {
+    box-shadow: 0 2px 10px -5px rgba(0, 0, 0, 0.5);
+  }
+  .collection article.wide {
     grid-column-end: span 2;
-}
-.collection article.tall {
+  }
+  .collection article.tall {
     grid-row-end: span 2;
-}
-
-/*:::::Pie de Pagina*/
-.pie-pagina{
+  }
+  
+  /*:::::Pie de Pagina*/
+  .pie-pagina {
     width: 100%;
-    background-color: #333;
-    /*max-height: 300px;*/    
-}
-.pie-pagina .grupo-1{
+    background-color: #ffc800;
+    /*max-height: 300px;*/
+  }
+  .pie-pagina .grupo-1 {
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap:50px;
+    grid-gap: 50px;
     padding: 45px 0px;
-}
-.pie-pagina .grupo-1 .box figure{
+  }
+  .pie-pagina .grupo-1 .box figure {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.pie-pagina .grupo-1 .box figure img{
-    height:12vh;
-}
-.pie-pagina .grupo-1 .box h2{
+  }
+  .pie-pagina .grupo-1 .box figure img {
+    height: 12vh;
+  }
+  .pie-pagina .grupo-1 .box h2 {
     color: #fff;
     margin-bottom: 25px;
     font-size: 20px;
-}
-.pie-pagina .grupo-1 .box p{
+  }
+  .pie-pagina .grupo-1 .box p {
     color: #efefef;
     margin-bottom: 10px;
-}
-
-.pie-pagina .grupo-1 .red-social a{
+  }
+  
+  .pie-pagina .grupo-1 .red-social a {
     display: inline-block;
     text-decoration: none;
     width: 45px;
@@ -121,27 +245,29 @@ section{
     background-color: #fbfaf8;
     text-align: center;
     transition: all 300ms ease;
-}
-.pie-pagina .grupo-1 .red-social a:hover{
+  }
+  .pie-pagina .grupo-1 .red-social a:hover {
     color: aqua;
-}
-.pie-pagina .grupo-2{
+  }
+  .pie-pagina .grupo-2 {
     background-color: black;
-    opacity:0.6;
-
+    opacity: 0.6;
+  
     padding: 15px 10px;
     text-align: center;
     color: #fff;
-}
-.pie-pagina .grupo-2 small{
+  }
+  .pie-pagina .grupo-2 small {
     font-size: 15px;
-}
-@media screen and (max-width:800px){
-    .pie-pagina .grupo-1{
-        width: 90%;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap:30px;
-        padding: 35px 0px;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .pie-pagina .grupo-1 {
+      width: 90%;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 30px;
+      padding: 35px 0px;
     }
-}
-/*:::::END Pie de Pagina*/
+  }
+  /*:::::END Pie de Pagina*/
+  
