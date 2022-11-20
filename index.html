@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
     <title>Guitarras Santa Cruz</title>
+    <link rel="icon" type="image/x-icon" href="Resources/icon.ico">
   </head>
 
   <body>
@@ -16,16 +17,16 @@
 
       <nav>
         <ul>
-          <li><a href="" class="nav-link">¿Quiénes somos?</a></li>
-          <li><a href="" class="nav-link">Galería</a></li>
-          <li><a href="" class="nav-link">¿Dónde estamos?</a></li>
-          <li><a href="" class="nav-link">¡Déjanos un comentario!</a></li>
-          <li><a href="" class="nav-link">Contacto</a></li>
-          <li>
+          <li><a href="#Presentacion" class="nav-link">¿Quiénes somos?</a></li>
+          <li><a href="#Nuestros_Productos" class="nav-link">Galería</a></li>
+          <li><a href="#Donde_Estamos" class="nav-link">¿Dónde estamos?</a></li>
+          <li><a href="#Comentarios" class="nav-link">¡Déjanos un comentario!</a></li>
+          <li><a href="#Contacto" class="nav-link">Contacto</a></li>
+          <!--<li>
             <a href="" class="nav-link"
               ><img alt="Carrito" src="Resources/shoppingcart2.png"
             /></a>
-          </li>
+          </li>-->
         </ul>
       </nav>
     </header>
@@ -53,16 +54,16 @@
       </div>
     </section>
 
-    <section class="Nuestros Productos" id="Nuestros Productos">
+    <section class="Nuestros_Productos" id="Nuestros_Productos">
       <div class="collection" id="collection">
-        <article>Guitarras</article>
-        <article>Guitarrones</article>
-        <article>Vihuelas</article>
-        <article>Violines</article>
+        <article class="Guitarra"><p>Guitarras</p></article>
+        <article class="Guitarron"><p>Guitarrones</p></article>
+        <article class="Vihuela"><p>Vihuelas</p></article>
+        <article class="Violin"><p>Violines</p></article>
       </div>
     </section>
 
-    <section class="Donde Estamos" id="Donde Estamos">
+    <section class="Donde_Estamos" id="Donde_Estamos">
       <div>
         <div class="section-divider">
             <h2>¿Dónde estamos?</h2>
@@ -102,6 +103,25 @@
               rhoncus laoreet. Sed a lorem a ex laoreet blandit. Fusce a faucibus
               leo.
             </p>
+
+            <form action="/comments" method="post">
+              <label for="name">Nombre:</label>
+              <input type="text" id="name" name="name">
+              <br>
+              <br>
+              
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email">
+              <br>
+              <br>
+              
+              <label for="comment">Comentario:</label>
+              <textarea id="comment" name="comment" rows="5" cols="40"></textarea>
+              <br>
+              <br>
+              
+              <input type="submit" value="Enviar">
+            </form>
           </div>
 
     </section>
@@ -131,8 +151,10 @@
           <a href="">81 1811 5564</a>
           <a href="">81 1811 5564</a>
         </div>
-
-        <div class="box">
+        <!-- 
+          El sitio web no tiene info sobre una página o un canal de yt, nada, por lo que no puedo
+          implementar esto porque no tengo nada qué poner.
+          <div class="box">
           <h2>SIGUENOS</h2>
           <div class="red-social">
             <a href="#" class="fa fa-facebook"></a>
@@ -141,6 +163,8 @@
             <a href="#" class="fa fa-youtube"></a>
           </div>
         </div>
+        -->
+        
       </div>
 
       <div class="grupo-2">
