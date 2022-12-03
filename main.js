@@ -4,6 +4,7 @@ import {loginCheck} from './app/loginCheck.js'
 
 import './app/logout.js'
 import './app/signupForm.js'
+import './app/loginForm.js'
 
  
 onAuthStateChanged(auth, async (user) => {
