@@ -6,14 +6,18 @@ import './app/logout.js'
 import './app/signupForm.js'
 import './app/loginForm.js'
 
- 
+
+
+
 onAuthStateChanged(auth, async (user) => {
     if(user){
         console.log("Usuario logueado:")
         loginCheck(user);
+        document.querySelector("#email").value = user.email;
       }
       else {
         console.log("Usuario no está logueado:")
         loginCheck(user);
+        document.querySelector("#email").value = "";
       }
 })
